@@ -1,15 +1,15 @@
-# Iniciar Contenedor
+## Iniciar Contenedor
 docker-compose up -d
 
 
-# Crear directorio oculto en path www:
+## Crear directorio oculto en path www:
 .well-known
 
 
-# Crear fichero index.html en path: 
+## Crear fichero index.html en path: 
 
 
-# Activar configuración de nginx.conf para el ssl
+## Activar configuración de nginx.conf para el ssl
 Insertar el siguiente codigo en el fichero de configuracion nginx.conf en el path "./nginx/conf/"
 
 ```
@@ -31,7 +31,7 @@ server {
 ```
 
 
-# Crear certificados
+## Crear certificados
 docker-compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -d example.com -d www.example.com
 
 
@@ -68,7 +68,7 @@ server {
 ```
 
 
-# Reiniciar Server para aplicar cambios de SSL
+## Reiniciar Server para aplicar cambios de SSL
 
 ```
 docker-compose restart
